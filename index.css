@@ -4,6 +4,7 @@ body {
   backdrop-filter: blur(3px);
   height: 100%;
   font-family: "LXGW WenKai Screen", sans-serif;
+  overflow: hidden;
 }
 
 h1 {
@@ -11,6 +12,7 @@ h1 {
   text-align: center;
   position: relative;
   top: 40px;
+  display: none;
 }
 
 video {
@@ -80,8 +82,8 @@ button:active {
   top: 15px;
   left: 15px;
   width: 420px;
-  height: 750px;
-  border-radius: 15px;
+  height: auto;
+  border-radius: 10px;
 }
 
 #rightImg {
@@ -89,8 +91,8 @@ button:active {
   top: 15px;
   right: 15px;
   width: 420px;
-  height: 750px;
-  border-radius: 15px;
+  height: auto;
+  border-radius: 10px;
 }
 
 #Tiangou {
@@ -98,6 +100,8 @@ button:active {
   position: relative;
   top: 30px;
   text-align: center;
+  backdrop-filter: blur(3px);
+  height: 250px;
 }
 
 .Tiangou {
@@ -105,5 +109,13 @@ button:active {
   position: relative;
   top: 30px;
   text-align: center;
-  backdrop-filter: blur(5 px);
+}
+
+@media only screen and (max-width: 1307px) {
+  #leftImg, #rightImg {
+    display: none;
+  }
+  body{
+    overflow-y: visible; 
+  }
 }
