@@ -9,6 +9,8 @@ function girl() {
         let video = document.getElementById("myvideo")
         video.volume = 0.3
         video.src = obj.data
+        video.style.filter="none";
+        video.style.webkitFilter = 'none'
       } else {
         console.log("error")
       }
@@ -77,6 +79,10 @@ var leftHeisi =()=>{
   .then(result => {
     let leftImg = document.getElementById("leftImg");
     let heisi = JSON.parse(result);
+    leftImg.onload= ()=>{
+    leftImg.style.filter="none";
+    leftImg.style.webkitFilter = 'none'
+    }
     leftImg.src = heisi.data;
   })
   .catch(error => console.log('error', error))
@@ -89,6 +95,10 @@ var rightBaisi =()=>{
   .then(result => {
     let rightImg = document.getElementById("rightImg");
     let baisi = JSON.parse(result);
+    rightImg.onload= ()=>{
+      rightImg.style.filter="none";
+      rightImg.style.webkitFilter = 'none'
+    }
     rightImg.src = baisi.data;
   })
   .catch(error => console.log('error', error))

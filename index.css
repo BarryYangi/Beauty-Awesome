@@ -23,6 +23,8 @@ video {
   width: 420px;
   height: 750px;
   border-radius: 15px;
+  transition: filter 1s ease;
+  filter: blur(5px);
 }
 
 button {
@@ -86,6 +88,8 @@ button:active {
   width: 420px;
   height: auto;
   border-radius: 10px;
+  filter: blur(5px);
+  transition: filter 1s ease;
 }
 
 #rightImg {
@@ -95,6 +99,8 @@ button:active {
   width: 420px;
   height: auto;
   border-radius: 10px;
+  filter: blur(5px);
+  transition: filter 1s ease;
 }
 
 #Tiangou {
@@ -114,9 +120,12 @@ button:active {
 }
 
 @media only screen and (max-width: 1307px) {
-  #leftImg, #rightImg {
+
+  #leftImg,
+  #rightImg {
     display: none;
   }
+
   video {
     display: block;
     margin: auto;
@@ -124,9 +133,11 @@ button:active {
     height: 640px;
     border-radius: 15px;
   }
-  button{
+
+  button {
     top: 5px;
   }
+
   #Tiangou {
     top: 5px;
   }
